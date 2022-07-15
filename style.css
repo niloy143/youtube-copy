@@ -139,6 +139,19 @@ aside .icon {
     margin: 0 25px;
 }
 
+aside .show-more {
+    transform: rotate(90deg); 
+    width: 15px; 
+    margin: 0 27.5px;
+}
+
+aside .profiles {
+    filter: invert(0);
+    border-radius: 50%;
+    width: 25px;
+    margin: 0 25px;
+}
+
 aside li {
     list-style-type: none;
     color: white;
@@ -153,11 +166,16 @@ aside hr.line {
     margin: 12px 0;
 }
 
-#show-more {
-    transform: rotate(90deg); 
-    width: 15px; 
-    margin: 0 27.5px;
+aside h2 {
+    color: #9b9b9b;
+    font-family: 'Franklin Gothic Medium';
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin: 16px 0 12px 25px;
 }
+
 section {
     width: calc(100% - var(--sizes));
     background-color: blue;
