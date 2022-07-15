@@ -1,14 +1,16 @@
 /* =========================== Universal Selectors ===================== */
 
-*, *::after, *::before {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style-type: none;
 }
 
 body {
     background: #181818;
     font-family: 'Hind Siliguri', sans-serif;
+    overflow-x: hidden;
 }
 
 .icon {
@@ -46,13 +48,14 @@ header .part-1 p {
     font-size: 22px;
     color: white;
     transform: scaleX(.8);
-    width: 20px;
+    margin-left: -5px;
+    cursor: pointer;
 }
 
 /* ====================================== */
 
 header .part-2 {
-    width: 35%;
+    width: 600px;
 }
 
 header .part-2 input {
@@ -60,7 +63,7 @@ header .part-2 input {
     outline: none;
     background: #121212;
     display: inline-block;
-    width: 65%;
+    width: 500px;
     height: 70%;
     border: 1px solid #303030;
     padding-left: 7px;
@@ -69,7 +72,7 @@ header .part-2 input {
 }
 
 header .part-2 div {
-    width: 9%;
+    width: 60px;
     height: 70%;
     display: inline-flex;
     justify-content: center;
@@ -81,12 +84,12 @@ header .part-2 .search {
 }
 
 header .part-2 .microphone {
-    width: 6%;
+    width: 40px;
     background: #181818;
     border-radius: 50%;
     margin-left: 5px;
+    cursor: pointer;
 }
-
 
 /* =========================== */
 
@@ -110,11 +113,12 @@ header .part-3 .icon {
 
 main {
     display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 aside {
-    --sizes: 13%;
-    width: var(--sizes);
+    width: 250px;
     background: #202020;
     padding-right: 15px;
 }
@@ -158,6 +162,9 @@ aside li {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 500;
+    white-space: nowrap;
+    margin-right: 18px;
+    overflow: hidden;
 }
 
 aside hr.line {
@@ -176,8 +183,103 @@ aside h2 {
     margin: 16px 0 12px 25px;
 }
 
+/* ============================================================ */
+
 section {
-    width: calc(100% - var(--sizes));
-    background-color: blue;
-    height: 100vh;
+    width: 87%;
+    display: flex;
+    flex-direction: column;
+}
+
+section .top-part {
+    background: #202020;
+    border-top: 1px solid #303030;
+}
+
+section .top-part ul {
+    color: #FDF2FD;
+    display: flex;
+}
+
+section .top-part ul li {
+    background: #353535;
+    border: 1px solid #454545;
+    padding: 2px 15px;
+    border-radius: 25px;
+    margin: 10px 5px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+section .top-part ul li:hover {
+    background: #404040;
+}
+
+section .top-part ul li#all {
+    background: #FDF2FD;
+    color: #202020;
+}
+
+/* ====================== */
+
+.body-part {
+    display: grid;
+    grid-template-columns: 22% 22% 22% 22%;
+    justify-content: center;
+    row-gap: 10px;
+    column-gap: 15px;
+    color: white;
+    margin-top: 25px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.body-part .videos .thumbnail {
+    position: relative;
+    width: 100%;
+    height: 205px;
+}
+
+.body-part .videos .thumbnail img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.body-part .videos .thumbnail span {
+    background: #121212;
+    padding: 0 6px;
+    border-radius: 3px;
+    font-size: 14px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+/* ============================= */
+
+.body-part .videos .description {
+    display: flex;
+    margin: 10px 0 30px;
+    align-items: flex-start;
+}
+
+.body-part .videos .description img {
+    width: 10%;
+    margin-right: 10px;
+    border-radius: 25px;
+}
+
+.body-part .videos .description p {
+    margin-bottom: 7px;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.body-part .videos .description .bottom {
+    font-size: 16px;
+    margin: 0;
+    color: #aaa;
+    line-height: 20px;
 }
